@@ -1,6 +1,6 @@
-import './bootstrap'; // dari Laravel, untuk Echo/Axios jika kamu pakai
-import '../sass/app.scss'; // pastikan pakai SCSS, bukan CSS
-import * as bootstrap from 'bootstrap'; // untuk fitur JS Bootstrap seperti dropdown/modal
+import './bootstrap';
+import 'bootstrap';
+import '../css/app.css';
 import Chart from 'chart.js/auto';
 
 window.Chart = Chart;

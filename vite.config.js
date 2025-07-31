@@ -13,12 +13,9 @@ export default defineConfig({
     ],
     css: {
         preprocessorOptions: {
-            scss: {
-                includePaths: ['node_modules/bootstrap/scss'],
-            },
+         scss: {
+            includePaths: ['node_modules/bootstrap/scss'],
+         },
         },
-    },
-    server: {
-        host: true,
     },
 });
