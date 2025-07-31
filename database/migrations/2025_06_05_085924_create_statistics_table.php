@@ -9,7 +9,8 @@ class CreateStatisticsTable extends Migration
     public function up()
     {
         Schema::create('statistics', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            // $table->bigIncrements('id');
+            $table->id(); // auto-increment primary key
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
             $table->date('month_year')->notNull();

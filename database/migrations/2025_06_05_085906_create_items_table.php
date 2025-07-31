@@ -9,17 +9,19 @@ class CreateItemsTable extends Migration
     public function up()
     {
         Schema::create('items', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            // $table->bigIncrements('id');
+            $table->id(); // auto-increment primary key
+
             $table->string('name')->notNull();
-            $table->string('slug')->unique()->after('name');
-            $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('subcategory_id');
+            $table->string('slug')->unique();
             $table->string('location')->notNull();
             $table->string('note')->nullable();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('subcategory_id')->references('id')->on('subcategories')->onDelete('cascade');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            $table->foreignId('category_id')->constrained('categories','id')->onDelete('cascade');
+            $table->foreignId('subcategory_id')->constrained('subcategories','id')->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users','id')->onDelete('cascade');
+
+    
             $table->timestamps();
         });
     }

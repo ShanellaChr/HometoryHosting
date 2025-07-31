@@ -9,9 +9,10 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            // $table->bigIncrements('id');
+            $table->id(); // auto-increment primary key
             $table->string('category')->notNull()->unique();
-            $table->string('slug')->unique()->after('category');
+            $table->string('slug')->unique();
             $table->string('color')->unique();
         });
     }

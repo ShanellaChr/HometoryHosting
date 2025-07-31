@@ -1,25 +1,24 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration
 {
     public function up()
     {
-        DB::statement('CREATE TABLE users (
-            id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-            username TEXT NOT NULL UNIQUE,
-            email TEXT NOT NULL UNIQUE,
-            email_verified_at DATETIME,
-            password TEXT NOT NULL,
-            role TEXT NOT NULL DEFAULT "user" CHECK (role IN ("user", "admin")),
-            reset_code TEXT,
-            reset_code_expires_at DATETIME,
-            created_at DATETIME,
-            updated_at DATETIME
-        )');
+        Schema::create('users', function (Blueprint $table) {
+            $table->id(); // auto-increment primary key
+            $table->string('username')->unique();
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->enum('role', ['user', 'admin'])->default('user');
+            $table->string('reset_code')->nullable();
+            $table->timestamp('reset_code_expires_at')->nullable();
+            $table->timestamps(); // created_at & updated_at
+        });
     }
 
     public function down()

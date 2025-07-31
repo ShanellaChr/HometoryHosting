@@ -9,7 +9,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('wishlists', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            // $table->bigIncrements('id');
+            $table->id(); // auto-increment primary key
+
             $table->string('items_name')->notNull();
             $table->unsignedBigInteger('category_id');
             $table->string('items_description')->nullable();

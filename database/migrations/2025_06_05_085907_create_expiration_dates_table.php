@@ -9,7 +9,9 @@ class CreateExpirationDatesTable extends Migration
     public function up()
     {
         Schema::create('expiration_dates', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            // $table->bigIncrements('id');
+            $table->id(); // auto-increment primary key
+
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('item_id')->constrained('items')->onDelete('cascade');
             $table->date('expiration_date')->notNull();
