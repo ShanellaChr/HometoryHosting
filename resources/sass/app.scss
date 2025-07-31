@@ -1,0 +1,529 @@
+/* COLORS */
+$custom-colors: (
+    "putih": #FFFFFF,
+    "orenpalette": #EEA144,
+    "putihpalette": #F3F9E3,
+    "ijopalette": #566E3D,
+    "birupalette": #011638,
+    "abupalette": #364156,
+    "pinkcategory": #F8C8DC,
+    "merahtuacategory": #CD4361,
+    "birucategory": #99D8F0,
+    "coklatcategory": #D29375,
+    "ijocategory": #9CBA7F,
+    "merahcategory": #E86060,
+    "orenyedija": #E46504,
+    "merahbutton": #89072A,
+    "abubutton": #888888,
+);
+
+@each $name, $color in $custom-colors {
+  :root {
+    --#{$name}: #{$color};
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+  .gradient-#{$name} {
+    background-image: linear-gradient(to right, #{$color} 0%, #{$color} 100%);
+  }
+}
+
+.text-xxs { font-size: 0.625rem !important; }
+.text-xs { font-size: 0.75rem !important; }
+.text-sm { font-size: 0.875rem !important; }
+.text-base { font-size: 1rem !important; }
+.text-lg { font-size: 1.125rem !important; }
+.text-xl { font-size: 1.25rem !important; }
+.text-2xl { font-size: 1.5rem !important; }
+.text-3xl { font-size: 1.875rem !important; }
+.text-4xl { font-size: 2.25rem !important; }
+.text-5xl { font-size: 3rem !important; }
+.text-6xl { font-size: 3.75rem !important; }
+.text-7xl { font-size: 4.5rem !important; }
+.text-8xl { font-size: 6rem !important; }
+.text-9xl { font-size: 8rem !important; }
+
+/* TYPOGRAPHY */
+.poppins-light {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+
+.nunito-light {
+  font-family: "Nunito", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+.nunito-regular {
+  font-family: "Nunito", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+.nunito-medium {
+  font-family: "Nunito", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+
+.nunito-semibold {
+  font-family: "Nunito", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+
+.nunito-bold {
+  font-family: "Nunito", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+
+.nunito-extrabold {
+  font-family: "Nunito", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+}
+
+.montserrat-light {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 300 !important;
+  font-style: normal !important;
+}
+
+.montserrat-regular {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+}
+
+.montserrat-medium {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+
+.montserrat-semibold {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+}
+
+.montserrat-bold {
+  font-family: "Montserrat", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+
+/* BUTTONS */
+.btn-dark-blue {
+  color: #F3F9E3 !important;
+  text-decoration: none !important;
+  background-color: #011638 !important;
+  border: none !important;
+  transition: all 0.4s ease-in-out !important;
+  width:41vw;
+  padding-left: 10.5vw;
+  padding-right: 10.5vw;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+}
+
+.btn-dark-blue:hover {
+  background-color: #566E3D !important;
+}
+
+.btn-orange {
+  color: #000000 !important;
+  text-decoration: none !important;
+  background-color: #EEA144 !important;
+  border: none !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.btn-orange:hover {
+  background-color: #F3F9E3 !important;
+}
+
+.btn-putih {
+  color: #000000 !important;
+  text-decoration: none !important;
+  background-color: #F3F9E3 !important;
+  border: none !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.btn-putih:hover {
+  color: #FFFFFF !important;
+  background-color: #566E3D !important;
+}
+
+.btn-merah {
+  color: #F3F9E3 !important;
+  text-decoration: none !important;
+  background-color: #89072A !important;
+  border: none !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.btn-merah:hover {
+  background-color: #AA3756 !important;
+}
+
+.btn-orange-putih {
+  color: #F3F9E3 !important;
+  text-decoration: none !important;
+  background-color: #EEA144 !important;
+  border: none !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.btn-orange-putih:hover {
+  background-color: #FFBD6E !important;
+}
+
+.btn-ijo {
+  color: #F3F9E3 !important;
+  text-decoration: none !important;
+  background-color: #566E3D !important;
+  border: none !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.btn-ijo:hover {
+  background-color: #90A07F !important;
+}
+
+.btn-abu {
+  color: #F3F9E3 !important;
+  text-decoration: none !important;
+  background-color: #888888 !important;
+  border: none !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+.btn-abu:hover {
+  background-color: #C0C0C0 !important;
+}
+
+.btn-orange-gelap {
+  background-color: #E46504 !important;
+}
+
+.btn-orange-gelap:hover {
+  background-color: #ab4a00 !important;
+  transform: scale(0.98);
+}
+
+/* CATEGORY HOVER */
+.category-btn {
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: background-size 0.6s ease-in-out;
+}
+
+.category-title {
+  transition: color 0.6s ease-in-out;
+}
+
+.category-line {
+  transition: all 0.6s ease-in-out;
+  width: 50%;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-size: 100% 100%;
+}
+
+.category-btn:hover .category-title,
+.category-btn.active .category-title {
+  color: white !important;
+}
+
+.category-btn:hover .category-line,
+.category-btn.active .category-line  {
+  width: 90%;
+  border-color: white !important;
+}
+
+.custom-card {
+  background-color: white; 
+  transition: background-color 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  background-color: #f0f0f0; 
+}
+
+// Wishlist
+.color-box-wishlist {
+    width: 1.25vw;
+    height: 1.25vw;
+    display: inline-block;
+}
+
+// Back Button
+.BackButton {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 1rem !important;
+  width: 40px;
+  cursor: pointer;
+}
+
+// untuk back button tapi versi di kanan
+.rotate-180{
+  transform: rotate(180deg);
+}
+
+/* cuma buat sizing si pensil di tombol button Edit */
+.pencil-icon{
+  width: 3.5vw;
+  height: 3.5vh;
+}
+
+// Line pembatas bulan tahun dan tanggal
+.calendar-line {
+  border-bottom: 2px solid #fff;
+}
+
+.calendar-table {
+  table-layout: fixed;
+}
+
+.calendar-shadow {
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.25);
+}
+
+.edit-button-shadow {
+  box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.25);
+}
+
+// ini titik penanda ada item yg expire dibawah tgl
+.dot {
+  height: 6px;
+  width: 6px;
+  background-color: #ffcc00;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+.calendar-day:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.right-box {
+  height : 80vh;
+}
+
+// Search Bar
+.search-form {
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+// Costom Checkbox (wishlist page)
+.custom-checkbox-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 2.5vw;
+    height: 2.5vw;
+    cursor: pointer;
+}
+.custom-checkbox-wrapper input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.custom-checkbox-wrapper .checkmark {
+    width: 100%;
+    height: 100%;
+    background-color: #F3F9E3; 
+    border: 0.25vw solid black;
+    border-radius: 0.5vw;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+}
+.custom-checkbox-wrapper .checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 25%;
+    top: 10%;
+    width: 45%;
+    height: 70%;
+    border: solid black;
+    border-width: 0 0.5vw 0.5vw 0;
+    transform: rotate(45deg);
+}
+.custom-checkbox-wrapper input[type="checkbox"]:checked + .checkmark::after {
+    display: block;
+}
+
+// Pensil (wishlist page)
+.icon-pencil {
+    transition: 0.2s ease-in-out;
+}
+.icon-pencil:hover {
+    content: url('/public/img/pencil\ yellow.svg');
+}
+
+// Trash (wishlist page)
+.icon-trash {
+    transition: 0.2s ease-in-out;
+}
+.icon-trash:hover {
+    content: url('/public/img/trashbin\ red.svg');
+}
+
+// Navbar Styling
+.navbar-hover:hover{
+  color: #E46504 !important;
+}
+
+.navlink-a{
+  text-decoration: none;
+  color: black;
+  font-size: 1vw;
+  transition: color 0.3s, border-bottom 1s ease-out;
+  border: 0.5vh solid transparent;
+  box-sizing: border-box;
+  padding: 1vh ;
+}
+
+.navlink-a.active{
+  color: #E46504;
+  border-bottom: solid#E46504;
+}
+
+.navbar-login{
+  display: inline-flex;
+  gap: 0.5vw;
+  border: 0.15vw solid black;
+  padding: 0.7vh 0.8vw;
+  border-radius: 50vh;
+  font-weight: bold;
+  font-size: small;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.navbar-login-done{
+  display: inline-flex;
+  gap: 0.8vw;
+  padding: 0.7vh 0.8vw;
+  border-radius: 50vh;
+  font-weight:600;
+  font-size: medium;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  align-items: center;
+}
+
+.navbar-login-done:hover{
+  color: #E46504;
+}
+
+.navbar-login:hover{
+  border: 0.15vw solid #E46504;
+  color: #E46504;
+}
+
+.category-btn.selected {
+    background-color: #FFB74D !important;
+    color: white !important;
+}
+
+// highlight lingkaran ketika ada tanggal yang dipilih
+.selected-date {
+    display: inline-block;
+    width: 2.8em;
+    height: 2.8em;
+    line-height: 2.5em;
+    border-radius: 50%;
+    background: #566E3D;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.calendar-dot {
+    position: absolute;
+    left: 50%;
+    bottom: 0.4em;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    background: #F3F9E3;
+    border-radius: 50%;
+    display: block;
+    z-index: 2;
+}
+
+.calendar-dot-else {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 7px;
+    height: 7px;
+    background: #F3F9E3;
+    border-radius: 50%;
+    display: block;
+    z-index: 2;
+}
