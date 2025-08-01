@@ -26,7 +26,7 @@
         </a>
         <img src="/img/LogoBox.svg" alt="Logo Box" class="img-fluid">
         <h3 class="pt-3 montserrat-bold text-center">Reset Password</h3>
-        <img src="/img/resetPassword2.svg" alt="Logo Box" class="img-fluid">
+        <img src="/img/ResetPassword2.svg" alt="Logo Box" class="img-fluid">
         <form action="{{ route('password.verifyCode') }}" method="POST" style="width: 400px;">
             @csrf
             <input type="hidden" name="email" value="{{ $email }}">
