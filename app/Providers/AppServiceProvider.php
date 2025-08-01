@@ -20,10 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        if (config('app.env') === 'production') {
-            URL::forceScheme('https');
-        }
-        //
-        // Item::observe(ItemObserver::class);
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https'); // <-- Pastikan ada titik koma di akhir baris ini
+        }
     }
 }
